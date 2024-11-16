@@ -51,11 +51,11 @@ const PasswordCard = () => {
             </div>
 
             {
-                userDataList.length <= 0 && (<p className='text-[#374151] text-2xl flex items-center justify-center h-[40vh]'>No data</p>)
+                userDataList ?.length <= 0 && (<p className='text-[#374151] text-2xl flex items-center justify-center h-[40vh]'>No data</p>)
             }
     
             {
-                userDataList.length > 0 && (
+                userDataList ?.length > 0 && (
                     <div className="overflow-x-hidden w-full flex gap-10 flex-wrap justify-center">
                         {
                             userDataList !== null && userDataList.map((element, index) => {
