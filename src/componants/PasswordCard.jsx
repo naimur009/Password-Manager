@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, {useState } from 'react';
 import AddNewForm from './AddNewForm';
 import Edit from './Edit';
 
@@ -35,7 +35,7 @@ const PasswordCard = () => {
 
     const copy = (e) => {
         let data = e.target.parentNode.parentNode.firstChild.innerText
-        console.log(data);
+        navigator.clipboard.writeText(data);
     }
 
     return (
