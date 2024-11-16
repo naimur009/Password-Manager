@@ -39,7 +39,7 @@ const PasswordCard = () => {
     }
 
     return (
-        <div className='w-[90%] m-auto'>
+        <div className='w-auto min-w-screen m-auto'>
             {
                 edit.form && (<Edit data={edit.data} load={load} />)
 
@@ -56,13 +56,13 @@ const PasswordCard = () => {
     
             {
                 userDataList ?.length > 0 && (
-                    <div className="overflow-x-hidden w-full flex gap-10 flex-wrap justify-center">
+                    <div className="scrollbar-hidden overflow-x-auto min-w-screen flex flex-wrap gap-[30px] min-[540px]:justify-center sm:m-10 sm:justify-center">
                         {
                             userDataList !== null && userDataList.map((element, index) => {
                                 return (
-                                    <table key="01" className="w-[400px] text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 rounded-lg">
+                                    <table key="01" className="min-w-screen w-[400px] text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 rounded-lg">
                                         <tbody>
-                                            <tr key={element.website} name={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-600 dark:hover:bg-slate-800 dark:text-white">
+                                            <tr key={element.website} name={index} className=" bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-slate-600 dark:hover:bg-slate-800 dark:text-white">
                                                 <td scope="row" className="px-6 py-2.5 text-gray-900 whitespace-nowrap dark:text-white font-bold">
                                                     Website
                                                 </td>
